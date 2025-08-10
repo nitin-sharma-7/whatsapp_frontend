@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = "https://whatapp-backend-dtnd.onrender.com";
 
 // Create axios instance with base configuration
 const api = axios.create({
