@@ -1,0 +1,226 @@
+/* Custom scrollbar styles for WhatsApp Web */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111b21;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #374045;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a5c63;
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Message bubble animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-bubble {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Loading animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Focus styles for WhatsApp Web */
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #00a884;
+}
+
+/* Hover effects for WhatsApp Web */
+.hover\:bg-\[\#2a3942\]:hover {
+  background-color: #2a3942;
+}
+
+.hover\:text-white:hover {
+  color: white;
+}
+
+/* WhatsApp Web specific colors */
+.bg-\[\#111b21\] {
+  background-color: #111b21;
+}
+
+.bg-\[\#202c33\] {
+  background-color: #202c33;
+}
+
+.bg-\[\#0b141a\] {
+  background-color: #0b141a;
+}
+
+.bg-\[\#2a3942\] {
+  background-color: #2a3942;
+}
+
+.bg-\[\#005c4b\] {
+  background-color: #005c4b;
+}
+
+.text-\[\#00a884\] {
+  color: #00a884;
+}
+
+.text-\[\#8696a0\] {
+  color: #8696a0;
+}
+
+.text-\[\#53bdeb\] {
+  color: #53bdeb;
+}
+
+.border-\[\#2f3b43\] {
+  border-color: #2f3b43;
+}
+
+/* Navbar specific styles */
+.navbar-item {
+  transition: all 0.2s ease;
+}
+
+.navbar-item:hover {
+  transform: scale(1.05);
+}
+
+.navbar-item.active {
+  background-color: #00a884;
+  color: white;
+}
+
+/* Navbar expansion styles */
+.navbar-container {
+  position: relative;
+  flex-shrink: 0;
+  height: 100vh;
+}
+
+.navbar-expanded {
+  transition: width 0.3s ease;
+  height: 100vh;
+}
+
+/* Smooth width transitions */
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+/* Responsive design for WhatsApp Web */
+@media (max-width: 768px) {
+  .md\:w-\[400px\] {
+    width: 100%;
+  }
+
+  /* Hide navbar on mobile */
+  .w-16 {
+    width: 0;
+    overflow: hidden;
+  }
+}
+
+/* Mobile menu overlay */
+.mobile-menu-overlay {
+  backdrop-filter: blur(4px);
+}
+
+/* WhatsApp Web message input styling */
+input::placeholder {
+  color: #8696a0;
+}
+
+/* WhatsApp Web button hover effects */
+button:hover {
+  background-color: #2a3942;
+}
+
+/* WhatsApp Web specific focus ring */
+.focus\:ring-\[\#00a884\]:focus {
+  --tw-ring-color: #00a884;
+}
+
+/* Navbar tooltip styles */
+[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #202c33;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+  margin-left: 8px;
+}
+
+/* Mobile specific styles */
+@media (max-width: 768px) {
+  .mobile-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+  }
+
+  .mobile-content {
+    height: calc(100vh - 60px);
+  }
+}
+
+/* Ensure full height for navbar */
+.h-full {
+  height: 100vh;
+}
+
+/* Prevent layout breaking */
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+/* Smooth navbar transitions */
+.navbar-transition {
+  transition: width 0.3s ease-in-out;
+}
+
+/* Ensure proper layout */
+.layout-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
