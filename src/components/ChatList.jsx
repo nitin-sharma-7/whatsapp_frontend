@@ -9,6 +9,7 @@ import {
 import axios from "axios";
 import { FaWhatsapp, FaSearch, FaEdit, FaEllipsisV } from "react-icons/fa";
 import { formatDistanceToNow } from "date-fns";
+import { URL } from "../backendUrl";
 
 const ChatList = ({ onChatSelect }) => {
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ const ChatList = ({ onChatSelect }) => {
     const fetchChats = async () => {
       try {
         dispatch(setLoading(true));
-        const { data } = await axios.get("http://localhost:5000/api/chats");
+        const { data } = await axios.get(`${URL}/api/chats`);
         console.log(data);
         setLocalChats(Array.isArray(data) ? data : []);
         dispatch(setChats(Array.isArray(data) ? data : []));
